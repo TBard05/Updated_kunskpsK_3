@@ -101,7 +101,7 @@ chart_budget_revenue = alt.layer(budget_chart, revenue_chart).resolve_scale(
 
 st.altair_chart(chart_budget_revenue, use_container_width=True)
 
-# top five movies that has the highest roi
+# top five movies that has the highest roi(return on investment)
 query_roi = '''
 SELECT names AS Movies, budget_x AS Budget, status ,revenue AS Revenue, (Revenue - budget_x) * 1.0 / budget_x AS ROI
 FROM IMDB
